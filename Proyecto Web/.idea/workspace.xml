@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f888f84e-4c31-4ecd-8447-ae0bfafff270" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="test@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="test@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="torneo" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Proyecto Web" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="bracket-torneo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/bracket-torneo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="162" column="41" lean-forward="true" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+              <folding>
+                <element signature="n#!!block;n#eliminacion16#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controlador-gestionar-torneo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-torneo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modificar-torneo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/modificar-torneo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crearTorneo.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/crearTorneo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="81" column="77" lean-forward="true" selection-start-line="81" selection-start-column="77" selection-end-line="81" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crear-torneo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/crear-torneo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-952">
+              <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crear-partidos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/crear-partidos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="35" column="105" lean-forward="false" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="19" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calendario.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/calendario.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="liga.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/liga.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grupos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/grupos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fade</find>
+      <find>modal</find>
+      <find>revert</find>
+      <find>drop</find>
+      <find>locale</find>
+      <find>lang</find>
+      <find>fecha</find>
+      <find>init</find>
+      <find>47</find>
+      <find>score</find>
+      <find>round</find>
+      <find>ronda</find>
+      <find>clubes</find>
+      <find>getEquipo</find>
+      <find>getValue</find>
+      <find>equipo</find>
+      <find>update</find>
+      <find>jugando</find>
+      <find>id</find>
+      <find>gracket</find>
+      <find>hover</find>
+      <find>g_team</find>
+      <find>team</find>
+      <find>seed</find>
+      <find>grupo</find>
+      <find>opts</find>
+      <find>torneo</find>
+      <find>panel</find>
+      <find>green</find>
+      <find>dropdownTorneo</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Datos/Conexion.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/isJugandoTorneo.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/elegirCategoria2.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/elegir-categoria.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/jquery.modal.css" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/datepicker.css" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/bootstrap-datepicker.js" />
+        <option value="$PROJECT_DIR$/../tournament_brackets/brackets.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/index.html" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/jquery.gracket.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/generarpartidos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/elegir-categoria.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/elegirCategoria.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-detalle-partidos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/test.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/generar-partidos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/crear-partidos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/registrar-jugador.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/registrar-jugador.css" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/registrar-club.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/modificar-partido.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-partidos-calendario.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-partidos-liga.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/isCategoriaJugandoTorneo.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/test.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-partidos-eliminacion.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/torneo-eliminacion.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/seleccionar-torneo.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/index.css" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/menuGlobal.css" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/calendar/calendario.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/liga.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/grupos.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/grupos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/seleccionar-torneo.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/liga.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/crear-torneo.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/modificar-torneo.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/crearTorneo.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-partido.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/modificar-partidos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-torneo.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Datos/query.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/crear-partidos.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/calendar/crear-partidos.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/calendar/modificar-partidos.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/menuGlobal.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/index.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/calendario.php" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/bracket-torneo.js" />
+        <option value="$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/modificar-torneo.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presentacion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presentacion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presentacion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="torneo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presentacion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendar" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presentacion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Presentacion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="image" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="escudos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Logica" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Proyecto Web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-sb-admin-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Datos" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/Program Files/nodejs/node.exe" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="SearchEverywhereHistoryKey" value="Real Primero &#9;null&#9;null" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="javascript.nodejs.core.library.configured.version" value="7.6.0" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\image\escudos" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\js\torneo" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\image" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\js\calendar" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Logica" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\image\escudos" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\image" />
+      <recent name="D:\Desarrollo\Practica II\Proyecto Web\startbootstrap-sb-admin-gh-pages\Presentacion\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f888f84e-4c31-4ecd-8447-ae0bfafff270" name="Default" comment="" />
+      <created>1484057039637</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1484057039637</updated>
+      <workItem from="1484057049751" duration="245000" />
+      <workItem from="1484057330642" duration="3922000" />
+      <workItem from="1484588687887" duration="2100000" />
+      <workItem from="1485305843029" duration="1696000" />
+      <workItem from="1485685952869" duration="25898000" />
+      <workItem from="1485719297406" duration="3426000" />
+      <workItem from="1485774666145" duration="16643000" />
+      <workItem from="1485910469740" duration="726000" />
+      <workItem from="1486400173959" duration="8172000" />
+      <workItem from="1487469055236" duration="1229000" />
+      <workItem from="1487470468825" duration="6000" />
+      <workItem from="1487470538580" duration="475000" />
+      <workItem from="1487472885323" duration="620000" />
+      <workItem from="1487478452373" duration="29812000" />
+      <workItem from="1487637096951" duration="23022000" />
+      <workItem from="1487792663401" duration="34399000" />
+      <workItem from="1487938218792" duration="10011000" />
+      <workItem from="1488028693368" duration="23064000" />
+      <workItem from="1488121416990" duration="23258000" />
+      <workItem from="1488201466491" duration="15479000" />
+      <workItem from="1488297530765" duration="19953000" />
+      <workItem from="1488380718190" duration="15823000" />
+      <workItem from="1488560751413" duration="100675000" />
+      <workItem from="1488911764852" duration="23333000" />
+      <workItem from="1489173754009" duration="29382000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="413369000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19804402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.49511003" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13811563" sideWeight="0.5122249" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18520783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27944326" sideWeight="0.48777506" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05567452" sideWeight="0.47860634" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.49022004" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/js/calendar/fullcalendar.js</url>
+          <line>11418</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/js/calendar/fullcalendar.js</url>
+          <line>11412</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/isCategoriaJugandoTorneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" lean-forward="false" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-detalle-partidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-categoria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="65" lean-forward="true" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/generar-partidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-jugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-partidos-calendario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="995" column="0" lean-forward="false" selection-start-line="995" selection-start-column="0" selection-end-line="995" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/registrar-club.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="140" column="9" lean-forward="false" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-club.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/torneo/jquery.bracket.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/jquery.gracket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2071">
+          <caret line="151" column="49" lean-forward="true" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/registrar-jugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="114" column="37" lean-forward="false" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="56" lean-forward="false" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/elegirCategoria.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="79" lean-forward="false" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-partidos-eliminacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="153" column="16" lean-forward="false" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/obtener-partidos-liga.php" />
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/seleccionar-torneo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="172" column="1" lean-forward="true" selection-start-line="172" selection-start-column="1" selection-end-line="172" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/bootstrap-elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="525" column="27" lean-forward="true" selection-start-line="525" selection-start-column="27" selection-end-line="525" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="3" column="429" lean-forward="false" selection-start-line="3" selection-start-column="429" selection-end-line="3" selection-end-column="429" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="4" column="54805" lean-forward="false" selection-start-line="4" selection-start-column="54805" selection-end-line="4" selection-end-column="54805" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/menuGlobal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/liga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="124" column="36" lean-forward="true" selection-start-line="124" selection-start-column="36" selection-end-line="124" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/torneo-eliminacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="63" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/eliminar-jugador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="128" column="60" lean-forward="false" selection-start-line="128" selection-start-column="60" selection-end-line="128" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/seleccionar-torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/modificar-club.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/grupos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/eliminar-categoria.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/image/escudos/none.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/modificar-torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/calendar/calendario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="144" column="57" lean-forward="false" selection-start-line="144" selection-start-column="57" selection-end-line="144" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-partido.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="110" column="39" lean-forward="true" selection-start-line="110" selection-start-column="39" selection-end-line="110" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Datos/query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="617" column="47" lean-forward="false" selection-start-line="617" selection-start-column="20" selection-end-line="617" selection-end-column="47" />
+          <folding>
+            <marker date="1489224238564" expanded="true" signature="346:776" ph="SELECT p.rut... Persona" />
+            <marker date="1489224238564" expanded="true" signature="1179:1404" ph="INSERT INTO Jugador... " />
+            <marker date="1489224238564" expanded="true" signature="1758:1923" ph="UPDATE Jugad... " />
+            <marker date="1489224238564" expanded="true" signature="2245:2296" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="2695:2821" ph="SELECT e.cod... Equipo" />
+            <marker date="1489224238564" expanded="true" signature="3194:3333" ph="INSERT INTO Equipo... " />
+            <marker date="1489224238564" expanded="true" signature="3657:3712" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="4055:4115" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="4453:4511" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="4890:4976" ph="SELECT p.rut... Persona" />
+            <marker date="1489224238564" expanded="true" signature="5342:5442" ph="INSERT INTO Persona... " />
+            <marker date="1489224238564" expanded="true" signature="5768:5855" ph="UPDATE Perso... " />
+            <marker date="1489224238564" expanded="true" signature="6177:6228" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="6607:6762" ph="SELECT cd.no... ClubDeportivo" />
+            <marker date="1489224238564" expanded="true" signature="7149:7273" ph="INSERT INTO ClubDeportivo... " />
+            <marker date="1489224238564" expanded="true" signature="7637:7865" ph="UPDATE ClubD... " />
+            <marker date="1489224238564" expanded="true" signature="8193:8258" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="8600:8866" ph="SELECT cd.ru... Categoria" />
+            <marker date="1489224238564" expanded="true" signature="9211:9282" ph="SELECT cd.ru... ClubDeportivo" />
+            <marker date="1489224238564" expanded="true" signature="9639:9732" ph="SELECT cd.es... ClubDeportivo" />
+            <marker date="1489224238564" expanded="true" signature="10148:10223" ph="SELECT d.rut... Dirigente" />
+            <marker date="1489224238564" expanded="true" signature="10597:10698" ph="INSERT INTO Dirigente... " />
+            <marker date="1489224238564" expanded="true" signature="11032:11278" ph="SELECT d.rut... Dirigente" />
+            <marker date="1489224238564" expanded="true" signature="11628:11683" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="12597:12663" ph="INSERT INTO Categoria... " />
+            <marker date="1489224238564" expanded="true" signature="12999:13097" ph="UPDATE Categ... " />
+            <marker date="1489224238564" expanded="true" signature="13424:13487" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="13810:13870" ph="SELECT c.cod... Categoria" />
+            <marker date="1489224238564" expanded="true" signature="14231:14452" ph="SELECT c.cod... Categoria" />
+            <marker date="1489224238564" expanded="true" signature="14960:15132" ph="SELECT * FRO... equipo" />
+            <marker date="1489224238564" expanded="true" signature="15564:15829" ph="SELECT c1.co... categoria" />
+            <marker date="1489224238564" expanded="true" signature="15661:15828" ph="SELECT * FRO... equipo" />
+            <marker date="1489224238564" expanded="true" signature="16190:16451" ph="SELECT c1.co... categoria" />
+            <marker date="1489224238564" expanded="true" signature="16283:16450" ph="SELECT c.cod... categoria" />
+            <marker date="1489224238564" expanded="true" signature="16830:17111" ph="SELECT c1.co... categoria" />
+            <marker date="1489224238564" expanded="true" signature="16830:17131" ph="SELECT c1.co... categoria" />
+            <marker date="1489224238564" expanded="true" signature="16923:17094" ph="SELECT c.cod... categoria" />
+            <marker date="1489224238564" expanded="true" signature="17602:17810" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="17602:18300" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="17602:18302" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="17602:18323" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="18713:19162" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="18713:19163" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="19538:19544" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="19538:20279" ph="SELECT (SELE... " />
+            <marker date="1489224238564" expanded="true" signature="19538:20298" ph="SELECT (SELE... " />
+            <marker date="1489224238564" expanded="true" signature="19546:19910" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="19914:20277" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="19914:20278" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="20676:21417" ph="SELECT (SELE... " />
+            <marker date="1489224238564" expanded="true" signature="20676:21438" ph="SELECT (SELE... " />
+            <marker date="1489224238564" expanded="true" signature="20684:21048" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="21052:21416" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="21814:22555" ph="SELECT (SELE... " />
+            <marker date="1489224238564" expanded="true" signature="21814:22575" ph="SELECT (SELE... " />
+            <marker date="1489224238564" expanded="true" signature="21822:22186" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="22190:22554" ph="SELECT count... partido" />
+            <marker date="1489224238564" expanded="true" signature="22945:23486" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="22945:23530" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="23896:23903" ph="SELECT * FRO... partido" />
+            <marker date="1489224238564" expanded="true" signature="23896:24435" ph="SELECT cd1.n... partido" />
+            <marker date="1489224238564" expanded="true" signature="23896:24477" ph="SELECT * FRO... partido" />
+            <marker date="1489224238564" expanded="true" signature="24899:24908" ph="SELECT * FRO... partido" />
+            <marker date="1489224238564" expanded="true" signature="24899:25452" ph="SELECT * FRO... partido" />
+            <marker date="1489224238564" expanded="true" signature="24899:25454" ph="SELECT * FRO... partido" />
+            <marker date="1489224238564" expanded="true" signature="24899:25475" ph="SELECT * FRO... partido" />
+            <marker date="1489224238564" expanded="true" signature="25917:26026" ph="INSERT INTO partido... " />
+            <marker date="1489224238564" expanded="true" signature="25917:26044" ph="INSERT INTO partido... " />
+            <marker date="1489224238564" expanded="true" signature="25917:26138" ph="INSERT INTO partido... " />
+            <marker date="1489224238564" expanded="true" signature="25928:25929" ph="UPDATE Categ... " />
+            <marker date="1489224238564" expanded="true" signature="26563:26803" ph="UPDATE parti... " />
+            <marker date="1489224238564" expanded="true" signature="26563:26903" ph="UPDATE parti... " />
+            <marker date="1489224238564" expanded="true" signature="27237:27303" ph="DELETE FROM " />
+            <marker date="1489224238564" expanded="true" signature="27685:27750" ph="SELECT * FRO... torneo" />
+            <marker date="1489224238564" expanded="true" signature="27685:27778" ph="SELECT t.cod... torneo" />
+            <marker date="1489224238564" expanded="true" signature="28148:28213" ph="SELECT t.cod... torneo" />
+            <marker date="1489224238564" expanded="true" signature="28148:28262" ph="SELECT t.cod... torneo" />
+            <marker date="1489224238564" expanded="true" signature="28148:28278" ph="SELECT t.cod... torneo" />
+            <marker date="1489224238564" expanded="true" signature="28652:28953" ph="SELECT disti... torneo" />
+            <marker date="1489224238564" expanded="true" signature="29340:29664" ph="SELECT t.cod... torneo" />
+            <marker date="1489224238564" expanded="true" signature="30020:30088" ph="INSERT INTO torneo... " />
+            <marker date="1489224238564" expanded="true" signature="30020:30091" ph="INSERT INTO torneo... " />
+            <marker date="1489224238564" expanded="true" signature="30020:30127" ph="INSERT INTO torneo... " />
+            <marker date="1489224238564" expanded="true" signature="30454:30517" ph="INSERT INTO grupo... " />
+            <marker date="1489224238564" expanded="true" signature="30873:30999" ph="UPDATE parti... " />
+            <marker date="1489224238564" expanded="true" signature="31418:31487" ph="UPDATE equip... " />
+            <marker date="1489224238564" expanded="true" signature="31418:31548" ph="UPDATE equip... " />
+            <marker date="1489224238564" expanded="true" signature="31888:31944" ph="SELECT * FRO... torneo" />
+            <marker date="1489224238564" expanded="true" signature="31888:31964" ph="SELECT * FRO... torneo" />
+            <marker date="1489224238564" expanded="true" signature="31888:32001" ph="SELECT * FRO... torneo" />
+            <marker date="1489224238564" expanded="true" signature="31894:31895" ph="UPDATE torne... " />
+            <marker date="1489224238564" expanded="true" signature="32400:32504" ph="SELECT g.cod... grupo" />
+            <marker date="1489224238564" expanded="true" signature="32400:32547" ph="SELECT codig... grupo" />
+            <marker date="1489224238564" expanded="true" signature="32400:32552" ph="SELECT g.cod... grupo" />
+            <marker date="1489224238564" expanded="true" signature="32914:33059" ph="SELECT g.cod... grupo" />
+            <marker date="1489224238564" expanded="true" signature="32914:33060" ph="SELECT disti... equipo" />
+            <marker date="1489224238564" expanded="true" signature="32914:33075" ph="SELECT disti... equipo" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/modificar-partidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="76" column="206" lean-forward="false" selection-start-line="76" selection-start-column="206" selection-end-line="76" selection-end-column="206" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/calendar/modificar-partidos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="254" column="53" lean-forward="false" selection-start-line="254" selection-start-column="53" selection-end-line="254" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/calendar/crear-partidos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="64" column="19" lean-forward="true" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/menuGlobal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/grupos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/liga.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/calendario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Logica/controlador-gestionar-torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/bracket-torneo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="162" column="41" lean-forward="true" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!block;n#eliminacion16#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/crear-partidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="35" column="105" lean-forward="false" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/crear-torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-952">
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/modificar-torneo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-sb-admin-gh-pages/Presentacion/js/torneo/crearTorneo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="81" column="77" lean-forward="true" selection-start-line="81" selection-start-column="77" selection-end-line="81" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

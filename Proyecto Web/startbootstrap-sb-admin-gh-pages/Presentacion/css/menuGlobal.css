@@ -1,0 +1,85 @@
+body {
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+#menu {
+    /*background-color: #3c763d;      */
+    background-color: #5aa57a; /* #008000; default */
+    /*color: #3c763d;*/
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.4);
+}
+
+#menuTitulo > a {
+    color: white;
+}
+
+#piePagina {
+    background-color: #5aa57a;
+    bottom: 0;
+}
+
+#piePagina > a {
+    color: white;
+}
+
+#menuOpciones > ul > li > a {
+    color: white;
+}
+
+/*mueve las opciones hacia la derecha*/
+.top-nav {
+    padding: 0 15px;
+}
+
+/*indica que las opciones esten alineadas de forma horizontal*/
+.top-nav > li {
+    display: inline-block;
+    float: left;
+}
+
+/* centraliza las opciones*/
+.top-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+/*indica el color del cual se tornaran las opciones al seleccionarlas con el mouse*/
+.top-nav > li > a:hover,
+.top-nav > li > a:focus,
+.top-nav > .open > a,
+.top-nav > .open > a:hover,
+.top-nav > .open > a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+/*hace que las opciones de un dropdown esten pegadas al boton (si se quita las opciones apareceran en un cuadro flotante)*/
+.top-nav > .open > .dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+

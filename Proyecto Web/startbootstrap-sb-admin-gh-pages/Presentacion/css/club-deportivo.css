@@ -1,0 +1,20 @@
+img{
+    float: left;
+}
+
+#listaJugadores,#tablaPequeña{
+    display: none;
+}
+
+@media (max-width: 400px)
+{
+    img,#tablaGrande{
+        display: none;
+    }
+
+    #tablaPequeña{
+        display: inherit;
+        font-size: xx-small;
+    }
+
+}
