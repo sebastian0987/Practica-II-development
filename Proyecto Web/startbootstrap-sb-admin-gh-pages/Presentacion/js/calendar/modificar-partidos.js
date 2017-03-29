@@ -4,14 +4,14 @@
 var torneos = [];
 var categorias = [];
 
-$(document).ready(function() {
+$(document).ready(function () {
     obtenerListaCategorias();
     var partido;
-    $('#golesEquipo1').on('change keyup', function() {
+    $('#golesEquipo1').on('change keyup', function () {
         var sanitized = $(this).val().replace(/[^0-9]]/g, '');
         $(this).val(sanitized);
     });
-    $('#golesEquipo2').on('change keyup', function() {
+    $('#golesEquipo2').on('change keyup', function () {
         var sanitized = $(this).val().replace(/[^0-9]/g, '');
         $(this).val(sanitized);
     });
@@ -28,8 +28,8 @@ $(document).ready(function() {
         // customize the button names,
         // otherwise they'd all just say "list"
         views: {
-            listDay: { buttonText: 'Día' },
-            listWeek: { buttonText: 'Semana' }
+            listDay: {buttonText: 'Día'},
+            listWeek: {buttonText: 'Semana'}
         },
         locale: 'es',
         defaultView: 'listWeek', // 'listWeek'
@@ -39,7 +39,7 @@ $(document).ready(function() {
         eventLimit: true, // allow "more" link when too many events
         events: '../Logica/obtener-partidos-calendario.php',
 
-        eventClick: function(calEvent, jsEvent, view) {
+        eventClick: function (calEvent, jsEvent, view) {
             // alert(calEvent.id);
 
             // $('#detallePartido').modal('show');
@@ -80,14 +80,11 @@ $(document).ready(function() {
     $("#guardar").click(function () {
         if (document.getElementById("dropdownCategoria").value == ""
             || document.getElementById("dropdownClub1").value.toString() === ""
-            || document.getElementById("dropdownClub2").value.toString()  === ""
-            || document.getElementById("dropdownTorneo").value.toString()  === ""
+            || document.getElementById("dropdownClub2").value.toString() === ""
+            || document.getElementById("dropdownTorneo").value.toString() === ""
             || document.getElementById("fecha").value == ""
             || document.getElementById("horaIni").value == ""
-            || document.getElementById("horaFin").value == ""
-            || document.getElementById("golesEquipo1").value == ""
-            || document.getElementById("golesEquipo1").value == "")
-        {
+            || document.getElementById("horaFin").value == "") {
             document.getElementById("pError").innerHTML = "Debe completar los campos marcados para continuar.";
             $('#modalMensaje').modal('show');
             document.getElementById("advertencia1").style.color = "#FF0000";
@@ -102,12 +99,12 @@ $(document).ready(function() {
             return;
 
         } else {
-            if ((document.getElementById("dropdownClub1").value.toString().localeCompare(document.getElementById("dropdownClub2").value.toString())==0)) {
+            if ((document.getElementById("dropdownClub1").value.toString().localeCompare(document.getElementById("dropdownClub2").value.toString()) == 0)) {
                 document.getElementById("pError").innerHTML = "Asegúrese de que los clubes deportivos sean distintos";
                 $('#modalMensaje').modal('show');
                 return;
             }
-            if(document.getElementById("horaIni").value > document.getElementById("horaFin").value ){
+            if (document.getElementById("horaIni").value > document.getElementById("horaFin").value) {
                 document.getElementById("pError").innerHTML = "La hora de inicio no puede ser antes de la hora de término";
                 $('#modalMensaje').modal('show');
                 return;
@@ -117,7 +114,7 @@ $(document).ready(function() {
     });
 
     $('#confirmar').click(function () {
-        var categoria =  document.getElementById("dropdownCategoria").value.toString();
+        var categoria = document.getElementById("dropdownCategoria").value.toString();
         var club1 = document.getElementById("dropdownClub1").value.toString();
         var club2 = document.getElementById("dropdownClub2").value.toString();
         var fecha = document.getElementById("fecha").value;
@@ -130,16 +127,15 @@ $(document).ready(function() {
 
         // alert(categoria + " " + club1 + " " + club2 + " " + fecha + " " + horaIni + " " + horaFin + " " + cancha + " " + goles1 + " " + goles2);
         modificarPartido(partido, categoria, club1, club2, goles1, goles2, fecha, horaIni, horaFin, cancha, torneo);
-        $('#calendar').fullCalendar( 'refetchEvents' )
+        $('#calendar').fullCalendar('refetchEvents')
         // obtenerListaCategoriasGrupos();
         // obtenerListaTorneos();
     });
 
 
-
 });
 
-function eliminarPartido(partido){
+function eliminarPartido(partido) {
     $.ajax({
         type: "POST",
         url: "../Logica/controlador-gestionar-partido.php",
@@ -162,21 +158,21 @@ function eliminarPartido(partido){
         });
     return imagen;
 }
-function desplegarImagenClub1(rutClub){
-    if(rutClub == -1){
-        $("#fotoEquipo1").attr("src","image/escudos/none.png");
+function desplegarImagenClub1(rutClub) {
+    if (rutClub == -1) {
+        $("#fotoEquipo1").attr("src", "image/escudos/none.png");
         return;
     }
-    $("#fotoEquipo1").attr("src","image/escudos/"+getImagenClub(rutClub));
+    $("#fotoEquipo1").attr("src", "image/escudos/" + getImagenClub(rutClub));
 }
-function desplegarImagenClub2(rutClub){
-    if(rutClub == -1){
-        $("#fotoEquipo2").attr("src","image/escudos/none.png");
+function desplegarImagenClub2(rutClub) {
+    if (rutClub == -1) {
+        $("#fotoEquipo2").attr("src", "image/escudos/none.png");
         return;
     }
-    $("#fotoEquipo2").attr("src","image/escudos/"+getImagenClub(rutClub));
+    $("#fotoEquipo2").attr("src", "image/escudos/" + getImagenClub(rutClub));
 }
-function getImagenClub(rutClub){
+function getImagenClub(rutClub) {
     var imagen;
     $.ajax({
         type: "POST",
@@ -190,13 +186,13 @@ function getImagenClub(rutClub){
         .done(function (data) {
             var opts = $.parseJSON(data);
             imagen = opts[0][0];
-            if(imagen == "" || imagen == null){
+            if (imagen == "" || imagen == null) {
                 imagen = "none.png";
             }
         });
     return imagen;
 }
-function getPartido(id){
+function getPartido(id) {
     $.ajax({
         type: "POST",
         url: "../Logica/controlador-gestionar-partido.php",
@@ -243,8 +239,8 @@ function getPartido(id){
 
 
             options = document.getElementById('dropdownCategoria').options;
-            for(var i = 0; i < options.length; i++) {
-                if(options[i].value === categoria) {
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].value === categoria) {
                     options[i].selected = true;
                     break;
                 }
@@ -252,8 +248,8 @@ function getPartido(id){
             obtenerListaTorneos(document.getElementById("dropdownCategoria").value.toString());
 
             options = document.getElementById('dropdownTorneo').options;
-            for(var i = 0; i < options.length; i++) {
-                if(options[i].value === codTorneo) {
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].value === codTorneo) {
                     options[i].selected = true;
                     break;
                 }
@@ -263,27 +259,27 @@ function getPartido(id){
             obtenerListaClubes(categoria);
 
             var options = document.getElementById('dropdownClub1').options;
-            for(var i = 0; i < options.length; i++) {
-                if(options[i].value === codClub1) {
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].value === codClub1) {
                     options[i].selected = true;
                     break;
                 }
             }
             options = document.getElementById('dropdownClub2').options;
-            for(var i = 0; i < options.length; i++) {
-                if(options[i].value === codClub2) {
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].value === codClub2) {
                     options[i].selected = true;
                     break;
                 }
             }
 
             var horaSpliteada = horaIni.split(":");
-             horaIni = horaSpliteada[0]+":"+horaSpliteada[1];
-            $('#horaIni').combodate('setValue',horaIni);
+            horaIni = horaSpliteada[0] + ":" + horaSpliteada[1];
+            $('#horaIni').combodate('setValue', horaIni);
 
-             horaSpliteada = horaFin.split(":");
-             horaFin = horaSpliteada[0]+":"+horaSpliteada[1];
-            $('#horaFin').combodate('setValue',horaFin);
+            horaSpliteada = horaFin.split(":");
+            horaFin = horaSpliteada[0] + ":" + horaSpliteada[1];
+            $('#horaFin').combodate('setValue', horaFin);
 
             document.getElementById("cancha").value = cancha;
             document.getElementById("golesEquipo1").value = goles1;
@@ -291,24 +287,24 @@ function getPartido(id){
 
             desplegarImagenClub1(codClub1);
             desplegarImagenClub2(codClub2);
-            $("#tituloPartido").html(nomClub1+" vs "+nomClub2);
+            $("#tituloPartido").html(nomClub1 + " vs " + nomClub2);
 
 
         }
 
     });
 }
-function getIndex(array, target){
+function getIndex(array, target) {
 
-    for(var i = 0;i<array.length;i++){
+    for (var i = 0; i < array.length; i++) {
         // alert(array[i].toString());
-        if(array[i].toString()===target.toString()){
+        if (array[i].toString() === target.toString()) {
             return i;
         }
     }
     return -1;
 }
-function modificarPartido(partido, categoria, club1,  club2, goles1, goles2, fecha, horaIni, horaFin, cancha, torneo) {
+function modificarPartido(partido, categoria, club1, club2, goles1, goles2, fecha, horaIni, horaFin, cancha, torneo) {
     $.ajax({
         type: "POST",
         url: "../Logica/controlador-gestionar-partido.php",
@@ -426,6 +422,6 @@ function obtenerListaCategorias() {
 function countArray(obj) {
     var count = 0;
     // iterate over properties, increment if a non-prototype property
-    for(var key in obj) if(obj.hasOwnProperty(key)) count++;
+    for (var key in obj) if (obj.hasOwnProperty(key)) count++;
     return count;
 }

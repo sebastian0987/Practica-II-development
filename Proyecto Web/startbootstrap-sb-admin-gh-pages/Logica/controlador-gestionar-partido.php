@@ -71,6 +71,14 @@ try {
             $respuesta = $conexion->getPartidosEmpatados($equipo[0][0],$tipoTorneo);
             echo json_encode($respuesta);
             break;
+        case 'obtenerGolesPartidos' :
+            $categoria = $_POST['categoria'];
+            $club = $_POST['rutClub'];
+            $tipoTorneo= $_POST['tipoTorneo'];
+            $equipo = $conexion->getEquipo($categoria,$club);
+            $respuesta = $conexion->getTablaPorEquipo($equipo[0][0],$tipoTorneo);
+            echo json_encode($respuesta);
+            break;
         case 'obtenerClubes' :
             $categoria = $_POST["categoria"];
             $respuesta = $conexion->getClubSegunCategoria($categoria);
@@ -116,8 +124,11 @@ try {
             $cancha = $_POST["cancha"];
             $torneo = $_POST["torneo"];
 
-
-            $conexion->updatePartido($codigoPartido,$equipo1,$equipo2,$fecha,$horaIni,$horaFin,$cancha,$torneo, $goles1, $goles2);
+            if($goles1=="" or $goles2 == ""){
+                $conexion->updatePartidoNoFinalizado($codigoPartido,$equipo1,$equipo2,$fecha,$horaIni,$horaFin,$cancha,$torneo);
+            }else{
+                $conexion->updatePartido($codigoPartido,$equipo1,$equipo2,$fecha,$horaIni,$horaFin,$cancha,$torneo, $goles1, $goles2);
+            }
             echo "modificado";
             break;
         case 'eliminar':

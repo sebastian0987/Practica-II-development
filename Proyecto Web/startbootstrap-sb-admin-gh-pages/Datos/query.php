@@ -571,7 +571,7 @@ class query
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT * FROM equipo e, torneo t, categoria c WHERE c.codigoCategoria = " . $codigoCategoria . " AND e.codigoCategoria = c.codigoCategoria AND e.torneoActual = t.codigoTorneo";
+            $strComando = "SELECT * FROM equipo e, torneo t, categoria c WHERE c.codigoCategoria = ". $codigoCategoria ." AND e.codigoCategoria = c.codigoCategoria AND e.torneoActual = t.codigoTorneo";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -579,7 +579,6 @@ class query
             throw $e;
         }
     }
-
     // Lista de categorias que no estan jugando un torneo actualmente
     public function getCategoriasNoJugandoUnTorneo()
     {
@@ -593,7 +592,6 @@ class query
             throw $e;
         }
     }
-
     public function getCategoriasSiJugandoUnTorneo()
     {
         try {
@@ -606,12 +604,11 @@ class query
             throw $e;
         }
     }
-
     public function getCategoriasSiJugandoUnTorneoPorTipo($tipoTorneo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT c1.codigoCategoria ,c1.nombreCategoria FROM categoria c1 WHERE c1.codigoCategoria in (SELECT c.codigoCategoria FROM categoria c, equipo e, torneo t WHERE e.codigoCategoria = c.codigoCategoria AND e.torneoActual = t.codigoTorneo AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "' )";
+            $strComando = "SELECT c1.codigoCategoria ,c1.nombreCategoria FROM categoria c1 WHERE c1.codigoCategoria in (SELECT c.codigoCategoria FROM categoria c, equipo e, torneo t WHERE e.codigoCategoria = c.codigoCategoria AND e.torneoActual = t.codigoTorneo AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '". $tipoTorneo ."' )";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -619,9 +616,7 @@ class query
             throw $e;
         }
     }
-
     //-----------------------Partido-------------------------
-
     // Retorna un partido, buscandolo por su codigo
     public function getPartido($codigoPartido)
     {
@@ -632,7 +627,7 @@ class query
 FROM partido p, equipo e1, equipo e2, categoria c, clubdeportivo cd1, clubdeportivo cd2, torneo t 
 WHERE p.codigoEquipo1 = e1.codigoEquipo AND p.codigoEquipo2 = e2.codigoEquipo AND e1.rutClubDeportivo = cd1.rutClubDeportivo
  AND e2.rutClubDeportivo = cd2.rutClubDeportivo AND e1.codigoCategoria = e2.codigoCategoria 
- AND e1.codigoCategoria = c.codigoCategoria AND t.codigoTorneo = p.codigoTorneo AND p.codigoPartido = '" . $codigoPartido . "' ";
+ AND e1.codigoCategoria = c.codigoCategoria AND t.codigoTorneo = p.codigoTorneo AND p.codigoPartido = '". $codigoPartido ."' ";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -640,7 +635,6 @@ WHERE p.codigoEquipo1 = e1.codigoEquipo AND p.codigoEquipo2 = e2.codigoEquipo AN
             throw $e;
         }
     }
-
     // Retorna una lista de todos los partidos
     public function getPartidos()
     {
@@ -654,7 +648,6 @@ WHERE p.codigoEquipo1 = e1.codigoEquipo AND p.codigoEquipo2 = e2.codigoEquipo AN
             throw $e;
         }
     }
-
     public function getPartidosGanados($codigoEquipo, $tipoTorneo)
     {
         try {
@@ -663,11 +656,11 @@ WHERE p.codigoEquipo1 = e1.codigoEquipo AND p.codigoEquipo2 = e2.codigoEquipo AN
 (SELECT count(*)
 FROM partido p, clubdeportivo cd, equipo e, torneo t
 WHERE p.golesEquipo1>p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
-AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "')+
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '".$codigoEquipo."' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."')+
 (SELECT count(*)
 FROM partido p, clubdeportivo cd, equipo e, torneo t
 WHERE p.golesEquipo1<p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
-AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "') as partidosGanados";
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '".$codigoEquipo."' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."') as partidosGanados";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -675,7 +668,6 @@ AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.c
             throw $e;
         }
     }
-
     public function getPartidosEmpatados($codigoEquipo, $tipoTorneo)
     {
         try {
@@ -684,11 +676,11 @@ AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.c
 (SELECT count(*)
 FROM partido p, clubdeportivo cd, equipo e, torneo t
 WHERE p.golesEquipo1=p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
-AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "')+
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '".$codigoEquipo."' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."')+
 (SELECT count(*)
 FROM partido p, clubdeportivo cd, equipo e, torneo t
 WHERE p.golesEquipo1=p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
-AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "') as partidosEmpatados";
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '".$codigoEquipo."' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."') as partidosEmpatados";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -696,7 +688,6 @@ AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.c
             throw $e;
         }
     }
-
     public function getPartidosPerdidos($codigoEquipo, $tipoTorneo)
     {
         try {
@@ -705,11 +696,11 @@ AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.c
 (SELECT count(*)
 FROM partido p, clubdeportivo cd, equipo e, torneo t
 WHERE p.golesEquipo1<p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
-AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "')+
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '".$codigoEquipo."' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."')+
 (SELECT count(*)
 FROM partido p, clubdeportivo cd, equipo e, torneo t
 WHERE p.golesEquipo1>p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
-AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "') as partidosPerdidos";
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '".$codigoEquipo."' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."') as partidosPerdidos";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -717,14 +708,13 @@ AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.c
             throw $e;
         }
     }
-
     public function getPartidosPorCodigoTorneo($codigoTorneo)
     {
         try {
             $this->bdConexion->conectar();
             $strComando = "SELECT cd1.nombreClubDeportivo nombreClub1, cd2.nombreClubDeportivo nombreClub2, e1.codigoEquipo codEquipo1, e2.codigoEquipo codEquipo2, p.golesEquipo1, p.golesEquipo2, p.codigoPartido
 FROM  partido p LEFT JOIN torneo t ON p.codigoTorneo = t.codigoTorneo LEFT JOIN equipo e1 ON e1.codigoEquipo = p.codigoEquipo1 LEFT JOIN clubdeportivo cd1 ON cd1.rutClubDeportivo = e1.rutClubDeportivo LEFT JOIN equipo e2 ON e2.codigoEquipo = p.codigoEquipo2 LEFT JOIN clubdeportivo cd2 ON cd2.rutClubDeportivo = e2.rutClubDeportivo
-WHERE t.codigoTorneo = '" . $codigoTorneo . "' AND t.finalizadoS_N = 'n'";
+WHERE t.codigoTorneo = '".$codigoTorneo."' AND t.finalizadoS_N = 'n'";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -732,14 +722,13 @@ WHERE t.codigoTorneo = '" . $codigoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     public function getPartidosPorTipoTorneo($tipoTorneo)
     {
         try {
             $this->bdConexion->conectar();
             $strComando = "SELECT cd1.nombreClubDeportivo nombreClub1, cd2.nombreClubDeportivo nombreClub2, e1.codigoEquipo codEquipo1, e2.codigoEquipo codEquipo2, p.golesEquipo1, p.golesEquipo2, p.codigoPartido
 FROM  partido p LEFT JOIN torneo t ON p.codigoTorneo = t.codigoTorneo LEFT JOIN equipo e1 ON e1.codigoEquipo = p.codigoEquipo1 LEFT JOIN clubdeportivo cd1 ON cd1.rutClubDeportivo = e1.rutClubDeportivo LEFT JOIN equipo e2 ON e2.codigoEquipo = p.codigoEquipo2 LEFT JOIN clubdeportivo cd2 ON cd2.rutClubDeportivo = e2.rutClubDeportivo
-WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
+WHERE t.tipoTorneo = '".$tipoTorneo."' AND t.finalizadoS_N = 'n'";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -747,13 +736,12 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     // Retorna una lista de partidos por categoria
     public function getPartidosPorCategoria($codigoCategoria)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT cd1.nombreclubdeportivo, cd2.nombreClubDeportivo, e1.codigoEquipo, e2.codigoEquipo, p.golesEquipo1, p.golesEquipo2, p.fecha, p.horaInicio, p.horaFin, p.cancha, p.codigoPartido FROM partido p, equipo e1, equipo e2, categoria c, clubdeportivo cd1, clubdeportivo cd2 WHERE p.codigoEquipo1 = e1.codigoEquipo AND p.codigoEquipo2 = e2.codigoEquipo AND e1.rutClubDeportivo = cd1.rutClubDeportivo AND e2.rutClubDeportivo = cd2.rutClubDeportivo AND e1.codigoCategoria = e2.codigoCategoria AND e1.codigoCategoria = c.codigoCategoria AND c.codigoCategoria = '" . $codigoCategoria . "' ";
+            $strComando = "SELECT cd1.nombreclubdeportivo, cd2.nombreClubDeportivo, e1.codigoEquipo, e2.codigoEquipo, p.golesEquipo1, p.golesEquipo2, p.fecha, p.horaInicio, p.horaFin, p.cancha, p.codigoPartido FROM partido p, equipo e1, equipo e2, categoria c, clubdeportivo cd1, clubdeportivo cd2 WHERE p.codigoEquipo1 = e1.codigoEquipo AND p.codigoEquipo2 = e2.codigoEquipo AND e1.rutClubDeportivo = cd1.rutClubDeportivo AND e2.rutClubDeportivo = cd2.rutClubDeportivo AND e1.codigoCategoria = e2.codigoCategoria AND e1.codigoCategoria = c.codigoCategoria AND c.codigoCategoria = '".$codigoCategoria."' ";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -761,32 +749,40 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     // Insertar un partido
     public function setPartido($codEquipo1, $codEquipo2, $fecha, $horaIni, $horaFin, $cancha, $codTorneo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "INSERT INTO partido (codigoEquipo1, codigoEquipo2, fecha, horaInicio, horaFin, cancha, codigoTorneo) VALUES ('" . $codEquipo1 . "', '" . $codEquipo2 . "','" . $fecha . "','" . $horaIni . "','" . $horaFin . "','" . $cancha . "','" . $codTorneo . "' ) ";
+            $strComando = "INSERT INTO partido (codigoEquipo1, codigoEquipo2,golesEquipo1,golesEquipo2, fecha, horaInicio, horaFin, cancha, codigoTorneo) VALUES ('".$codEquipo1."', '".$codEquipo2."',NULL,NULL,'".$fecha."','".$horaIni."','".$horaFin."','".$cancha."','".$codTorneo."' ) ";
             $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
             $this->bdConexion->desconectar();
         } catch (Exception $e) {
             throw $e;
         }
     }
-
     public function updatePartido($codigoPartido, $club1, $club2, $fecha, $horaIni, $horaFin, $cancha, $torneo, $golesEquipo1, $golesEquipo2)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "UPDATE partido SET codigoEquipo1 = '" . $club1 . "', codigoEquipo2 = '" . $club2 . "', fecha ='" . $fecha . "', horaInicio = '" . $horaIni . "', horaFin = '" . $horaFin . "', cancha = '" . $cancha . "', codigoTorneo = '" . $torneo . "' , golesEquipo1 = '" . $golesEquipo1 . "', golesEquipo2 = '" . $golesEquipo2 . "'  WHERE codigoPartido='" . $codigoPartido . "';";
+            $strComando = "UPDATE partido SET codigoEquipo1 = '". $club1 ."', codigoEquipo2 = '". $club2 ."', fecha ='". $fecha ."', horaInicio = '". $horaIni ."', horaFin = '". $horaFin ."', cancha = '". $cancha ."', codigoTorneo = '". $torneo ."' , golesEquipo1 = '". $golesEquipo1."', golesEquipo2 = '". $golesEquipo2."'  WHERE codigoPartido='". $codigoPartido ."';";
             $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
             $this->bdConexion->desconectar();
         } catch (Exception $e) {
             throw $e;
         }
     }
-
+    public function updatePartidoNoFinalizado($codigoPartido, $club1, $club2, $fecha, $horaIni, $horaFin, $cancha, $torneo)
+    {
+        try {
+            $this->bdConexion->conectar();
+            $strComando = "UPDATE partido SET codigoEquipo1 = '". $club1 ."', codigoEquipo2 = '". $club2 ."', fecha ='". $fecha ."', horaInicio = '". $horaIni ."', horaFin = '". $horaFin ."', cancha = '". $cancha ."', codigoTorneo = '". $torneo ."'  WHERE codigoPartido='". $codigoPartido ."';";
+            $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
+            $this->bdConexion->desconectar();
+        } catch (Exception $e) {
+            throw $e;
+        }
+    }
     public function deletePartido($codigoPartido)
     {
         try {
@@ -798,7 +794,6 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     //-----------------------Torneo-------------------------
     public function getListaTorneos()
     {
@@ -812,12 +807,11 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     public function getListaTorneosPorTipoTorneo($tipoTorneo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT t.codigoTorneo, t.nombreTorneo, t.tipoTorneo FROM torneo t WHERE t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "'";
+            $strComando = "SELECT t.codigoTorneo, t.nombreTorneo, t.tipoTorneo FROM torneo t WHERE t.finalizadoS_N = 'n' AND t.tipoTorneo = '".$tipoTorneo."'";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -825,12 +819,11 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     public function getListaTorneosPorCategoria($codigoCategoria)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT distinct t.codigoTorneo, t.nombreTorneo, t.tipoTorneo FROM torneo t, categoria c, partido p, equipo e WHERE t.codigoTorneo = p.codigoTorneo AND e.codigoCategoria = c.codigoCategoria AND p.codigoEquipo1 = e.codigoEquipo AND t.finalizadoS_N = 'n'  AND c.codigoCategoria = '" . $codigoCategoria . "'  ";
+            $strComando = "SELECT distinct t.codigoTorneo, t.nombreTorneo, t.tipoTorneo FROM torneo t, categoria c, equipo e WHERE e.codigoCategoria = c.codigoCategoria AND  t.finalizadoS_N = 'n'  AND e.torneoActual = t.codigoTorneo AND c.codigoCategoria =  '". $codigoCategoria ."'  ";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -838,12 +831,11 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     public function getListaTorneosEliminacionPorCategoria($codigoCategoria)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT t.codigoTorneo, t.nombreTorneo, t.tipoTorneo FROM torneo t, categoria c, partido p, equipo e WHERE t.codigoTorneo = p.codigoTorneo AND e.codigoCategoria = c.codigoCategoria AND p.codigoEquipo1 = e.codigoEquipo AND t.finalizadoS_N = 'n' AND t.tipoTorneo = 'eliminacion' AND c.codigoCategoria = '" . $codigoCategoria . "'  ";
+            $strComando = "SELECT t.codigoTorneo, t.nombreTorneo, t.tipoTorneo FROM torneo t, categoria c, partido p, equipo e WHERE t.codigoTorneo = p.codigoTorneo AND e.codigoCategoria = c.codigoCategoria AND p.codigoEquipo1 = e.codigoEquipo AND t.finalizadoS_N = 'n' AND t.tipoTorneo = 'eliminacion' AND c.codigoCategoria = '". $codigoCategoria ."'  ";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -851,56 +843,51 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     public function setTorneo($nombre, $tipo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "INSERT INTO torneo (nombreTorneo, tipoTorneo, finalizadoS_N) VALUES ( '" . $nombre . "' , '" . $tipo . "', 'n') ";
+            $strComando = "INSERT INTO torneo (nombreTorneo, tipoTorneo, finalizadoS_N) VALUES ( '". $nombre ."' , '". $tipo ."', 'n') ";
             $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
             $this->bdConexion->desconectar();
         } catch (Exception $e) {
             throw $e;
         }
     }
-
     public function setGrupo($codigoTorneo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "INSERT INTO grupo (codigoTorneo) VALUES ( '" . $codigoTorneo . "') ";
+            $strComando = "INSERT INTO grupo (codigoTorneo) VALUES ( '". $codigoTorneo."') ";
             $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
             $this->bdConexion->desconectar();
         } catch (Exception $e) {
             throw $e;
         }
     }
-
     public function updateTorneo($codigoTorneo, $nombre, $finalizadoS_N)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "UPDATE torneo SET nombreTorneo = '" . $nombre . "', finalizadoS_N ='" . $finalizadoS_N . "'WHERE codigoTorneo ='" . $codigoTorneo . "'";
+            $strComando = "UPDATE torneo SET nombreTorneo = '". $nombre."', finalizadoS_N ='". $finalizadoS_N."'WHERE codigoTorneo ='". $codigoTorneo ."'";
             $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
             $this->bdConexion->desconectar();
         } catch (Exception $e) {
             throw $e;
         }
     }
-
-    // Updatea el grupo en el que juega un equipo
+    // Updatea el grupo (y el torneo) en el que juega un equipo actualmente
     public function updateGrupoDeUnEquipo($codigoEquipo, $codigoGrupo, $codigoTorneo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "UPDATE equipo SET codigoGrupo = '" . $codigoGrupo . "', torneoActual = '" . $codigoTorneo . "' WHERE codigoEquipo ='" . $codigoEquipo . "'";
+            $strComando = "UPDATE equipo SET codigoGrupo = '". $codigoGrupo."', torneoActual = '". $codigoTorneo. "' WHERE codigoEquipo ='". $codigoEquipo."'";
             $resp = $this->bdConexion->ejecutarSinRetorno($strComando);
             $this->bdConexion->desconectar();
         } catch (Exception $e) {
             throw $e;
         }
     }
-
     public function getUltimoTorneoIngresado($tipoTorneo)
     {
         try {
@@ -913,13 +900,12 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
-    // Usado para creaci贸n de ligas
+    // Usado para creación de ligas
     public function getGruposPorTorneo($codigoTorneo)
     {
         try {
             $this->bdConexion->conectar();
-            $strComando = "SELECT g.codigoGrupo FROM grupo g, torneo t WHERE t.codigoTorneo = g.codigoTorneo AND g.codigoTorneo = '" . $codigoTorneo . "' ORDER BY g.codigoGrupo DESC";
+            $strComando = "SELECT g.codigoGrupo FROM grupo g, torneo t WHERE t.codigoTorneo = g.codigoTorneo AND g.codigoTorneo = '". $codigoTorneo ."' ORDER BY g.codigoGrupo DESC";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -927,14 +913,13 @@ WHERE t.tipoTorneo = '" . $tipoTorneo . "' AND t.finalizadoS_N = 'n'";
             throw $e;
         }
     }
-
     public function getGruposPorCategoria($categoria)
     {
         try {
             $this->bdConexion->conectar();
             $strComando = "SELECT distinct e.codigoGrupo, c.codigoCategoria
 FROM equipo e, categoria c 
-WHERE e.codigoCategoria = c.codigoCategoria AND c.codigoCategoria = '" . $categoria . "'";
+WHERE e.codigoCategoria = c.codigoCategoria AND c.codigoCategoria = '".$categoria."'";
             $resp = $this->bdConexion->ejecutarConRetorno($strComando);
             $this->bdConexion->desconectar();
             return $resp;
@@ -955,6 +940,63 @@ WHERE e.codigoCategoria = c.codigoCategoria AND c.codigoCategoria = '" . $catego
             throw $e;
         }
     }
+
+    public function getTablaPorEquipo($codigoEquipo, $tipoTorneo)
+    {
+        try {
+            $this->bdConexion->conectar();
+            $strComando = "SELECT cd.nombreClubDeportivo as Club,
+(SELECT count(*)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE p.golesEquipo1>p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "')+
+(SELECT count(*)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE p.golesEquipo1<p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "') as PG,
+(SELECT count(*)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE p.golesEquipo1=p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "')+
+(SELECT count(*)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE p.golesEquipo1=p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "') as PE,
+(SELECT count(*)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE p.golesEquipo1<p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "')+
+(SELECT count(*)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE p.golesEquipo1>p.golesEquipo2 AND cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = 'n' AND t.tipoTorneo = '" . $tipoTorneo . "') as PP,
+IFNULL((SELECT SUM(p.golesEquipo1)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = \"n\" AND t.tipoTorneo = '" . $tipoTorneo . "'),0)+
+IFNULL((SELECT SUM(p.golesEquipo2)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = \"n\" AND t.tipoTorneo = '" . $tipoTorneo . "'),0) as GF,
+IFNULL((SELECT SUM(p.golesEquipo2)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo1 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = \"n\" AND t.tipoTorneo = '" . $tipoTorneo . "'),0)+
+IFNULL(
+(SELECT SUM(p.golesEquipo1)
+FROM partido p, clubdeportivo cd, equipo e, torneo t
+WHERE cd.rutClubDeportivo = e.rutClubDeportivo  AND t.codigoTorneo = e.torneoActual 
+AND p.codigoEquipo2 = e.codigoEquipo AND p.codigoTorneo = t.codigoTorneo AND e.codigoEquipo = '" . $codigoEquipo . "' AND t.finalizadoS_N = \"n\" AND t.tipoTorneo = '" . $tipoTorneo . "'),0) as GC
+FROM clubdeportivo cd, equipo e
+WHERE e.codigoEquipo = '" . $codigoEquipo . "' AND e.rutClubDeportivo = cd.rutClubDeportivo";
+            $resp = $this->bdConexion->ejecutarConRetorno($strComando);
+            $this->bdConexion->desconectar();
+            return $resp;
+        } catch (Exception $e) {
+            throw $e;
+        }
+    }
+
 }
 
 ?>

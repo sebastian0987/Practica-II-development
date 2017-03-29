@@ -142,7 +142,7 @@ try {
             break;
         case 'eliminarImagen':
             $imagen = $_POST["NombreImagen"];
-            unlink("../Presentacion/image/" .$imagen);
+            unlink("../Presentacion/image/escudos/" .$imagen);
             break;
         case 'eliminar':
             $rut = $_POST["Rut"];

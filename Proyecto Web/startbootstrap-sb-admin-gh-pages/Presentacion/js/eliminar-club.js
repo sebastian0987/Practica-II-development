@@ -86,7 +86,7 @@ function obtenerClubDeportivo(rut) {
             document.getElementById("tbRut").value = opts[0][1];
             document.getElementById("tbFechaFundacion").value = opts[0][2];
             document.getElementById("tbPersonalidadJuridica").value = opts[0][3];
-            document.getElementById("escudoClubDeportivo").src = "image/"+opts[0][4];
+            document.getElementById("escudoClubDeportivo").src = "image/escudos/"+opts[0][4];
             obtenerCategoriasSegunClubDeportivo(opts[0][1]);
             obtenerDirigentesSegunClubDeportivo(opts[0][1]);
         }

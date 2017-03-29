@@ -14,15 +14,16 @@ var golesEquipo2 = new Array();
 
 function actualizarBracket(value){
     // alert(value);
+
     codigosPartidos = [];
 
-     codigoEquipo1 = [];
-     nombreEquipo1 = [];
-     golesEquipo1 = [];
+    codigoEquipo1 = [];
+    nombreEquipo1 = [];
+    golesEquipo1 = [];
 
-     codigoEquipo2 = [];
-     nombreEquipo2 = [];
-     golesEquipo2 = [];
+    codigoEquipo2 = [];
+    nombreEquipo2 = [];
+    golesEquipo2 = [];
     $("#bracket").empty();
     $(".my_gracket").gracket({
         // src : win.TestData2
@@ -212,8 +213,8 @@ function eliminacion(value) {
                     codigoEquipo2[4] = codigoEquipo1[1];
                 }
                 if(golesEquipo1[1]<golesEquipo2[1]){
-                    nombreEquipo1[4] = nombreEquipo2[1];
-                    codigoEquipo1[4] = codigoEquipo2[1];
+                    nombreEquipo2[4] = nombreEquipo2[1];
+                    codigoEquipo2[4] = codigoEquipo2[1];
                 }
 
                 if(golesEquipo1[2]>golesEquipo2[2]){

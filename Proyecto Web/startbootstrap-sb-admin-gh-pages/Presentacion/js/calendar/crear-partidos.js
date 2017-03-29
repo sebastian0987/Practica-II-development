@@ -74,6 +74,7 @@ function obtenerListaTorneos(categoria) {
         }
     })
         .done(function (data) {
+            // alert(data);
             var opts = $.parseJSON(data);
             torneos = [];
             $('#dropdownTorneo').empty().append('<option value="' + 1 + '">' + "Amistoso" + '</option>');
@@ -111,6 +112,7 @@ function insertarPartido(categoria, club1,  club2, fecha, horaIni, horaFin, canc
                     $('#modalMensaje').modal('show');
                     return;
                 } else {
+                    document.getElementById("h4Error").innerHTML = "Error";
                     document.getElementById("pError").innerHTML = "Han surgido problemas al intentar ingresar el jugador, vuelva a intentarlo mas tarde.";
                     $('#modalMensaje').modal('show');
                     return;

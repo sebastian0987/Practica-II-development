@@ -1,17 +1,12 @@
 <?php
-
 include '../Datos/query.php';
-
 try {
     $conexion = new query();
-
     switch ($_POST ['tipo']) {
-
         case 'crear' :
             $categoria = $_POST['categoria'];
             $nombre = $_POST['nombre'];
             $tipoTorneo = $_POST['tipoTorneo'];
-
             if($tipoTorneo == 'liga'){
                 $conexion->setTorneo($nombre, $tipoTorneo);
                 $ultimoTorneo = $conexion->getUltimoTorneoIngresado("liga");
@@ -25,50 +20,23 @@ try {
                 }
             }
             if($tipoTorneo == 'eliminacion'){
+                $clubes = $_POST['clubes'];
                 $conexion->setTorneo($nombre, $tipoTorneo);
-//                $ultimoTorneo = $conexion->getUltimoTorneoIngresado('eliminacion');
-//                $clubes = $_POST['clubes'];
-//                shuffle($clubes);
-//                if(count($clubes)==8){
-//                    $conexion->setPartido($clubes[0],$clubes[1],null,null,null,"",$ultimoTorneo[0][0]);
-//                    $conexion->setPartido($clubes[2],$clubes[3],null,null,null,"",$ultimoTorneo[0][0]);
-//                    $conexion->setPartido($clubes[4],$clubes[5],null,null,null,"",$ultimoTorneo[0][0]);
-//                    $conexion->setPartido($clubes[6],$clubes[7],null,null,null,"",$ultimoTorneo[0][0]);
-//
-//                    $conexion->setPartido(null,null,null,null,null,"",$ultimoTorneo[0][0]);
-//                    $conexion->setPartido(null,null,null,null,null,"",$ultimoTorneo[0][0]);
-//                    $conexion->setPartido(null,null,null,null,null,"",$ultimoTorneo[0][0]);
-//                }
-//                if(count($clubes)==16){
-//
-//                }
-
-
-//                while(!1){
-//                    $clubDeportivo1 = $_POST["club1"];
-//                    $respuesta = $conexion->getEquipo($categoria,$clubDeportivo1);
-//                    $equipo1 = $respuesta[0][0];
-//
-//                    $clubDeportivo2 = $_POST["club2"];
-//                    $respuesta = $conexion->getEquipo($categoria,$clubDeportivo2);
-//                    $equipo2 = $respuesta[0][0];
-//
-//                    $fecha = $_POST ["fecha"];
-//                    $horaIni = $_POST ["horaIni"];
-//                    $horaFin = $_POST ["horaFin"];
-//                    $cancha = $_POST["cancha"];
-//                    $torneo = $_POST["torneo"];
-//                    $conexion->setPartido($equipo1,$equipo2,$fecha,$horaIni,$horaFin,$cancha,$torneo);
-//                }
+                $ultimoTorneo = $conexion->getUltimoTorneoIngresado("eliminacion");
+                $conexion->setGrupo($ultimoTorneo[0][0]);
+                $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
+                for($i = 0; $i<count($clubes);$i++){
+                    $club = $clubes[$i][0];
+                    $equipo = $conexion->getEquipo($categoria,$club);
+                    $conexion->updateGrupoDeUnEquipo($equipo[0][0],$ultimoGrupo[0][0],$ultimoTorneo[0][0]);
+                }
             }
             if($tipoTorneo == 'grupos'){
                 $numGrupos = $_POST['numGrupos'];
                 $clubes = $_POST['clubes'];
-
                 $conexion->setTorneo($nombre, $tipoTorneo);
                 $ultimoTorneo = $conexion->getUltimoTorneoIngresado("grupos");
                 shuffle($clubes);
-
                 if(count($clubes)==8){
                     $conexion->setGrupo($ultimoTorneo[0][0]);
                     $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
@@ -76,7 +44,6 @@ try {
                         $equipo = $conexion->getEquipo($categoria,$clubes[$i]);
                         $conexion->updateGrupoDeUnEquipo($equipo[0][0],$ultimoGrupo[0][0],$ultimoTorneo[0][0]);
                     }
-
                     $conexion->setGrupo($ultimoTorneo[0][0]);
                     $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
                     for($i = 4; $i<8; $i++){
@@ -84,12 +51,6 @@ try {
                         $conexion->updateGrupoDeUnEquipo($equipo[0][0],$ultimoGrupo[0][0],$ultimoTorneo[0][0]);
                     }
                 }
-
-
-
-
-
-
                 if(count($clubes)==16) {
                     if ($numGrupos == 2) {
                         $conexion->setGrupo($ultimoTorneo[0][0]);
@@ -98,7 +59,6 @@ try {
                             $equipo = $conexion->getEquipo($categoria,$clubes[$i]);
                             $conexion->updateGrupoDeUnEquipo($equipo[0][0],$ultimoGrupo[0][0],$ultimoTorneo[0][0]);
                         }
-
                         $conexion->setGrupo($ultimoTorneo[0][0]);
                         $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
                         for($i = 8; $i<16; $i++){
@@ -113,22 +73,18 @@ try {
                             $equipo = $conexion->getEquipo($categoria, $clubes[$i]);
                             $conexion->updateGrupoDeUnEquipo($equipo[0][0], $ultimoGrupo[0][0], $ultimoTorneo[0][0]);
                         }
-
                         $conexion->setGrupo($ultimoTorneo[0][0]);
                         $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
                         for ($i = 4; $i < 8; $i++) {
                             $equipo = $conexion->getEquipo($categoria, $clubes[$i]);
                             $conexion->updateGrupoDeUnEquipo($equipo[0][0], $ultimoGrupo[0][0], $ultimoTorneo[0][0]);
                         }
-
-
                         $conexion->setGrupo($ultimoTorneo[0][0]);
                         $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
                         for ($i = 8; $i < 12; $i++) {
                             $equipo = $conexion->getEquipo($categoria, $clubes[$i]);
                             $conexion->updateGrupoDeUnEquipo($equipo[0][0], $ultimoGrupo[0][0], $ultimoTorneo[0][0]);
                         }
-
                         $conexion->setGrupo($ultimoTorneo[0][0]);
                         $ultimoGrupo = $conexion->getGruposPorTorneo($ultimoTorneo[0][0]);
                         for ($i = 12; $i < 16; $i++) {
@@ -215,9 +171,7 @@ try {
             $finalizadoS_N = $_POST["finalizadoS_N"];
             $respuesta = $conexion->updateTorneo($codigoTorneo, $nombreTorneo, $finalizadoS_N);
             echo "modificado";
-
         case 'eliminar':
-
             break;
     }
 } catch ( Exception $e ) {

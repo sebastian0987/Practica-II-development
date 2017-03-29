@@ -63,7 +63,7 @@ function obtenerClubDeportivo(rut) {
         $('#datosClub').append('<label>RUT: ' + opts[0][1] + '</label><br>');
         $('#datosClub').append('<label>Fecha de Fundación: ' + opts[0][2] + '</label><br>');
         $('#datosClub').append('<label>Personalidad Juridica: ' + opts[0][3] + '</label><br>');
-        document.getElementById("escudoClubDeportivo").src = "image/"+opts[0][4];
+        document.getElementById("escudoClubDeportivo").src = "image/escudos/"+opts[0][4];
         obtenerDirigenteSegunClub(rut);
         $('#modalSolicitar').modal('hide');
     });

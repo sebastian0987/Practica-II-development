@@ -1,4 +1,3 @@
-<!-- Importando el menu principal-->
 <?php
 include "menuGlobal.php";
 ?>

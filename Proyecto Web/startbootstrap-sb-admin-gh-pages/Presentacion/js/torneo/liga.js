@@ -22,7 +22,7 @@ $(document).ready(function () {
 function getDatosLiga(posicionCategoria) {
     // for (var i = 0; i < 1; i++) {
     // alert(posicionCategoria);
-    if (posicionCategoria == codCategorias.length){
+    if (posicionCategoria == codCategorias.length) {
         // alert("fin")
         return;
     }
@@ -48,7 +48,7 @@ function getDatosLiga(posicionCategoria) {
                     ""
                 ]);
             }
-            getPartidosGanados(0, opts, categoria,posicionCategoria);
+            getPartidosGanados(0, opts, categoria, posicionCategoria);
             // $.each(opts, function (i, d) {
             //     datosGrupo.push([categoria,
             //         0,
@@ -95,11 +95,37 @@ function getDatosLiga(posicionCategoria) {
 
 function rellenarTabla(categoria) {
     // $('#tbody1').empty();
+//----------Ordenamiento burbuja----------------------
+    for (var i = 1; i < datos.length; i++) {
+        for (var j = 0; j < (datos.length - i); j++) {
+            if (datos[j][6] < datos[j + 1][6]) {
+                a = datos[j + 1][2];
+                b = datos[j + 1][3];
+                c = datos[j + 1][4];
+                d = datos[j + 1][5];
+                e = datos[j + 1][6];
+                f = datos[j + 1][7];
+                datos[j + 1][2] = datos[j][2];
+                datos[j + 1][3] = datos[j][3];
+                datos[j + 1][4] = datos[j][4];
+                datos[j + 1][5] = datos[j][5];
+                datos[j + 1][6] = datos[j][6];
+                datos[j + 1][7] = datos[j][7];
+                datos[j][2] = a;
+                datos[j][3] = b;
+                datos[j][4] = c;
+                datos[j][5] = d;
+                datos[j][6] = e;
+                datos[j][7] = f;
+            }
+        }
+    }
+//-----------------------------------------------------
     $('#tbody' + categoria).empty();
     var k = 1;
     for (var i = 0; i < datos.length; i++) {
-        if (datos[i][0] != categoria)
-            continue;
+        // if (datos[i][0] != categoria)
+        //     continue;
         datos[i][1] = k;
         k++;
         // if (categoria=='3'){
@@ -108,10 +134,11 @@ function rellenarTabla(categoria) {
             "<tr>" +
             "<td>" + datos[i][1] + "</td>" +
             "<td>" + datos[i][2] + "</td>" +
+            "<td>" + datos[i][6] + "</td>" +
             "<td>" + datos[i][3][0][0] + "</td>" +
             "<td>" + datos[i][4][0][0] + "</td>" +
             "<td>" + datos[i][5][0][0] + "</td>" +
-            "<td>" + datos[i][6] + "</td>" +
+            "<td>" + datos[i][7][0][0] + "</td>" +
             "</tr>"
         );
         // }
@@ -146,7 +173,7 @@ function obtenerListaCategorias() {
     })
         .done(function (data) {
             var opts = $.parseJSON(data);
-            if(opts == ""){
+            if (opts == "") {
                 document.getElementById("ulCategorias").style.display = 'none'
                 return;
             }
@@ -172,10 +199,12 @@ function obtenerListaCategorias() {
                         '<tr>' +
                         '<th>Posición</th>' +
                         '<th>Club</th>' +
+                        '<th>Pts</th>' +
                         '<th>PG</th>' +
                         '<th>PE</th>' +
                         '<th>PP</th>' +
-                        '<th>Pts</th>' +
+                        '<th>GF</th>' +
+                        '<th>GC</th>' +
                         '</tr>' +
                         '</thread>' +
                         '<tbody id="tbody' + d.codigoCategoria + '">' +
@@ -201,10 +230,12 @@ function obtenerListaCategorias() {
                         '<tr>' +
                         '<th>Posición</th>' +
                         '<th>Club</th>' +
+                        '<th>Pts</th>' +
                         '<th>PG</th>' +
                         '<th>PE</th>' +
                         '<th>PP</th>' +
-                        '<th>Pts</th>' +
+                        '<th>GF</th>' +
+                        '<th>GC</th>' +
                         '</tr>' +
                         '</thread>' +
                         '<tbody id="tbody' + d.codigoCategoria + '">' +
@@ -222,7 +253,7 @@ function obtenerListaCategorias() {
                         '</div>');
                 }
                 j++;
-                $('#menu'+d.codigoCategoria).append('<button id="btCargando' + d.codigoCategoria + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
+                $('#menu' + d.codigoCategoria).append('<button id="btCargando' + d.codigoCategoria + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
             });
             // alert("s")
 
@@ -293,17 +324,19 @@ function obtenerListaCategorias() {
             //     j++;
             //
             // });
-            getDatosLiga(0);
+            getTablaPosiciones(0);
+            // getDatosLiga(0);
         });
 }
-function getPartidosGanados(fila, clubes, categoria,posicionCategoria) {
+function getPartidosGanados(fila, clubes, categoria, posicionCategoria) {
     // alert(clubes.length)
     // alert(fila)
     if (fila == clubes.length) {
-        document.getElementById("btCargando"+categoria).style.display = 'none';
+        document.getElementById("btCargando" + categoria).style.display = 'none';
+        // ordenamientoBurbuja(datos)
         rellenarTabla(categoria)
         datos.length = 0;
-        getDatosLiga(posicionCategoria+1)
+        getDatosLiga(posicionCategoria + 1)
         return
     }
     var club = clubes[fila][0];
@@ -327,13 +360,13 @@ function getPartidosGanados(fila, clubes, categoria,posicionCategoria) {
                 var temp = [opts[0][0], categoria];
                 datos[fila][3] = opts[0][0];
                 datos[fila][6] = parseInt(opts[0][0]) * 3;
-                getPartidosEmpatados(fila, clubes, categoria,posicionCategoria)
+                getPartidosEmpatados(fila, clubes, categoria, posicionCategoria)
                 // partidosGanados.push(temp);
             });
         });
     // return partidosGanados;
 }
-function getPartidosEmpatados(fila, clubes, categoria,posicionCategoria) {
+function getPartidosEmpatados(fila, clubes, categoria, posicionCategoria) {
     var club = clubes[fila][0];
     var partidosEmpatados = [];
     $.ajax({
@@ -352,14 +385,14 @@ function getPartidosEmpatados(fila, clubes, categoria,posicionCategoria) {
                 var temp = [d.partidosEmpatados, categoria];
                 datos[fila][4] = opts[0][0];
                 datos[fila][6] = parseInt(datos[fila][6]) + parseInt(opts[0][0]);
-                getPartidosPerdidos(fila, clubes, categoria,posicionCategoria);
+                getPartidosPerdidos(fila, clubes, categoria, posicionCategoria);
                 // partidosEmpatados.push(temp);
             });
         });
     // return partidosEmpatados;
 }
 
-function getPartidosPerdidos(fila, clubes, categoria,posicionCategoria) {
+function getPartidosPerdidos(fila, clubes, categoria, posicionCategoria) {
     var club = clubes[fila][0];
     var partidosPerdidos = [];
     $.ajax({
@@ -379,8 +412,143 @@ function getPartidosPerdidos(fila, clubes, categoria,posicionCategoria) {
                 datos[fila][5] = opts[0][0];
                 // partidosPerdidos.push(temp);
             });
-            getPartidosGanados(fila + 1, clubes, categoria,posicionCategoria);
+            getGolesPorPartido(fila, clubes, categoria, posicionCategoria);
+            // getPartidosGanados(fila + 1, clubes, categoria, posicionCategoria);
         });
 
     // return partidosPerdidos;
+}
+
+function getGolesPorPartido(fila, clubes, categoria, posicionCategoria) {
+    var club = clubes[fila][0];
+    $.ajax({
+        type: "POST",
+        url: "../Logica/controlador-gestionar-partido.php",
+        data: {
+            tipo: "obtenerGolesPartidos",
+            categoria: categoria,
+            rutClub: club,
+            tipoTorneo: 'liga'
+        }
+    }).done(function (data) {
+        var opts = $.parseJSON(data);
+        datos[fila][7] = opts[0][0];
+        getPartidosGanados(fila + 1, clubes, categoria, posicionCategoria);
+    });
+}
+
+function getTablaPosiciones(posicionCategoria) {
+    if (posicionCategoria == codCategorias.length) {
+        return;
+    }
+    var categoria = codCategorias[posicionCategoria];
+    // alert(categoria)
+    $.ajax({
+        type: "POST",
+        url: "../Logica/controlador-gestionar-partido.php",
+        data: {
+            tipo: "obtenerClubes",
+            categoria: categoria
+        }
+    }).done(function (data) {
+        var opts = $.parseJSON(data);
+        obtenerDatosTablaPorClub(0, opts, categoria, posicionCategoria);
+    });
+}
+
+function obtenerDatosTablaPorClub(filaClub, clubes, categoria, posicionCategoria) {
+    if (filaClub == clubes.length) {
+        document.getElementById("btCargando" + categoria).style.display = 'none';
+        llenarTablaPosiciones(categoria)
+        datos.length = 0;
+        getTablaPosiciones(posicionCategoria + 1)
+        return
+    }
+    var club = clubes[filaClub][0];
+    $.ajax({
+        type: "POST",
+        url: "../Logica/controlador-gestionar-partido.php",
+        data: {
+            tipo: "obtenerGolesPartidos",
+            categoria: categoria,
+            rutClub: club,
+            tipoTorneo: 'liga'
+        }
+    }).done(function (data) {
+        var opts = $.parseJSON(data);
+        datos.push([opts[0][0], opts[0][1], opts[0][2], opts[0][3], opts[0][4], opts[0][5], (parseInt(opts[0][1]) * 3) + parseInt(opts[0][2])]);
+        obtenerDatosTablaPorClub(filaClub + 1, clubes, categoria, posicionCategoria);
+    });
+}
+
+function llenarTablaPosiciones(categoria) {
+//----------Ordenamiento burbuja----------------------
+    for (var i = 1; i < datos.length; i++) {
+        for (var j = 0; j < (datos.length - i); j++) {
+            if (datos[j][6] < datos[j + 1][6]) {
+                a = datos[j + 1][0];
+                b = datos[j + 1][1];
+                c = datos[j + 1][2];
+                d = datos[j + 1][3];
+                e = datos[j + 1][4];
+                f = datos[j + 1][5];
+                g = datos[j + 1][6];
+                datos[j + 1][0] = datos[j][0];
+                datos[j + 1][1] = datos[j][1];
+                datos[j + 1][2] = datos[j][2];
+                datos[j + 1][3] = datos[j][3];
+                datos[j + 1][4] = datos[j][4];
+                datos[j + 1][5] = datos[j][5];
+                datos[j + 1][6] = datos[j][6];
+                datos[j][0] = a;
+                datos[j][1] = b;
+                datos[j][2] = c;
+                datos[j][3] = d;
+                datos[j][4] = e;
+                datos[j][5] = f;
+                datos[j][6] = g;
+            }
+            if (datos[j][6] == datos[j + 1][6]) {
+                if ((datos[j][4] - datos[j][5]) < (datos[j + 1][4] - datos[j + 1][5])) {
+                    a = datos[j + 1][0];
+                    b = datos[j + 1][1];
+                    c = datos[j + 1][2];
+                    d = datos[j + 1][3];
+                    e = datos[j + 1][4];
+                    f = datos[j + 1][5];
+                    g = datos[j + 1][6];
+                    datos[j + 1][0] = datos[j][0];
+                    datos[j + 1][1] = datos[j][1];
+                    datos[j + 1][2] = datos[j][2];
+                    datos[j + 1][3] = datos[j][3];
+                    datos[j + 1][4] = datos[j][4];
+                    datos[j + 1][5] = datos[j][5];
+                    datos[j + 1][6] = datos[j][6];
+                    datos[j][0] = a;
+                    datos[j][1] = b;
+                    datos[j][2] = c;
+                    datos[j][3] = d;
+                    datos[j][4] = e;
+                    datos[j][5] = f;
+                    datos[j][6] = g;
+                }
+            }
+        }
+    }
+//-----------------------------------------------------
+    $('#tbody' + categoria).empty();
+    for (var i = 0; i < datos.length; i++) {
+        $('#tbody' + categoria).append(
+            "<tr>" +
+            "<td>" + (parseInt(i) + 1) + "</td>" +
+            "<td>" + datos[i][0] + "</td>" +
+            "<td>" + datos[i][6] + "</td>" +
+            "<td>" + datos[i][1] + "</td>" +
+            "<td>" + datos[i][2] + "</td>" +
+            "<td>" + datos[i][3] + "</td>" +
+            "<td>" + datos[i][4] + "</td>" +
+            "<td>" + datos[i][5] + "</td>" +
+            "</tr>"
+        );
+    }
 }

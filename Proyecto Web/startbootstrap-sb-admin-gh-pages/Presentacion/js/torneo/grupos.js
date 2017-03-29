@@ -63,10 +63,12 @@ function getGruposPorCategoria(posicionCategoria) {
                         '<tr>' +
                         '<th>Posición</th>' +
                         '<th>Club</th>' +
+                        '<th>Pts</th>' +
                         '<th>PG</th>' +
                         '<th>PE</th>' +
                         '<th>PP</th>' +
-                        '<th>Pts</th>' +
+                        '<th>GF</th>' +
+                        '<th>GC</th>' +
                         '</tr>' +
                         '</thread>' +
                         '<tbody id="tbodyGrupo' + d.codigoGrupo + '">' +
@@ -92,10 +94,12 @@ function getGruposPorCategoria(posicionCategoria) {
                         '<tr>' +
                         '<th>Posición</th>' +
                         '<th>Club</th>' +
+                        '<th>Pts</th>' +
                         '<th>PG</th>' +
                         '<th>PE</th>' +
                         '<th>PP</th>' +
-                        '<th>Pts</th>' +
+                        '<th>GF</th>' +
+                        '<th>GC</th>' +
                         '</tr>' +
                         '</thread>' +
                         '<tbody id="tbodyGrupo' + d.codigoGrupo + '">' +
@@ -116,7 +120,8 @@ function getGruposPorCategoria(posicionCategoria) {
                 $('#menuGrupo' + d.codigoGrupo).append('<button id="btCargando' + d.codigoGrupo + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
             });
         // $('#tabs' + categoria).append('<button id="btCargando' + categoria + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
-            getDatosClubesPorGrupo(posicionCategoria,opts,0);
+        getTablaPosicionesGrupo(posicionCategoria,opts,0)
+        //     getDatosClubesPorGrupo(posicionCategoria,opts,0);
             // $.each(opts, function (i, d) {
             //     $('#ulGrupos' + categoria).append('<li class="active"> <a data-toggle="tab" href="#' + d.codigoGrupo + '" onclick="rellenarTablaGrupo(' + categoria + ',' + d.codigoGrupo + ');" >' + letras[a] + '</a></li>');
             //     rellenarTablaGrupo(categoria, d.codigoGrupo);
@@ -419,4 +424,140 @@ function getPartidosPerdidosGrupos(fila, clubes,posicionCategoria,codigoGrupos,p
             // });
         });
     // return partidosPerdidos;
+}
+
+
+function getTablaPosicionesGrupo(posicionCategoria,grupos,posicionGrupo) {
+    // alert(grupos.length)
+    if (posicionGrupo == grupos.length){
+        getGruposPorCategoria(posicionCategoria+1);
+        return;
+    }
+    var grupo = grupos[posicionGrupo][0];
+    var categoria = codCategoriasGrupo[posicionCategoria]
+    $.ajax({
+        type: "POST",
+        url: "../Logica/controlador-gestionar-partido.php",
+        data: {
+            tipo: "obtenerClubPorGrupo",
+            Grupo: grupo
+        }
+    }).done(function (data) {
+        var opts = $.parseJSON(data);
+        obtenerDatosTablaPorClubGrupo(0, opts,posicionCategoria,grupos,posicionGrupo);
+    });
+//     if (posicionCategoria == codCategorias.length) {
+//         return;
+//     }
+//     var categoria = codCategorias[posicionCategoria];
+//     // alert(categoria)
+//     $.ajax({
+//         type: "POST",
+//         url: "../Logica/controlador-gestionar-partido.php",
+//         data: {
+//             tipo: "obtenerClubes",
+//             categoria: categoria
+//         }
+//     }).done(function (data) {
+//         var opts = $.parseJSON(data);
+//         obtenerDatosTablaPorClub(0, opts, categoria, posicionCategoria);
+//     });
+}
+
+function obtenerDatosTablaPorClubGrupo(filaClub, clubes, posicionCategoria,grupos,posicionGrupo) {
+    var categoria = codCategoriasGrupo[posicionCategoria];
+    if (filaClub == clubes.length) {
+        document.getElementById("btCargando"+grupos[posicionGrupo][0]).style.display = 'none';
+        llenarTablaPosicionesGrupo(grupos[posicionGrupo][0]);
+        datosGrupo.length = 0;
+        getTablaPosicionesGrupo(posicionCategoria,grupos,posicionGrupo+1);
+        return;
+    }
+    var club = clubes[filaClub][0];
+    $.ajax({
+        type: "POST",
+        url: "../Logica/controlador-gestionar-partido.php",
+        data: {
+            tipo: "obtenerGolesPartidos",
+            categoria: categoria,
+            rutClub: club,
+            tipoTorneo: 'grupos'
+        }
+    }).done(function (data) {
+        var opts = $.parseJSON(data);
+        datosGrupo.push([opts[0][0], opts[0][1], opts[0][2], opts[0][3], opts[0][4], opts[0][5], (parseInt(opts[0][1]) * 3) + parseInt(opts[0][2])]);
+        obtenerDatosTablaPorClubGrupo(filaClub + 1, clubes,posicionCategoria,grupos,posicionGrupo);
+    });
+}
+
+function llenarTablaPosicionesGrupo(codigoGrupo) {
+//----------Ordenamiento burbuja----------------------
+    for (var i = 1; i < datosGrupo.length; i++) {
+        for (var j = 0; j < (datosGrupo.length - i); j++) {
+            if (datosGrupo[j][6] < datosGrupo[j + 1][6]) {
+                a = datosGrupo[j + 1][0];
+                b = datosGrupo[j + 1][1];
+                c = datosGrupo[j + 1][2];
+                d = datosGrupo[j + 1][3];
+                e = datosGrupo[j + 1][4];
+                f = datosGrupo[j + 1][5];
+                g = datosGrupo[j + 1][6];
+                datosGrupo[j + 1][0] = datosGrupo[j][0];
+                datosGrupo[j + 1][1] = datosGrupo[j][1];
+                datosGrupo[j + 1][2] = datosGrupo[j][2];
+                datosGrupo[j + 1][3] = datosGrupo[j][3];
+                datosGrupo[j + 1][4] = datosGrupo[j][4];
+                datosGrupo[j + 1][5] = datosGrupo[j][5];
+                datosGrupo[j + 1][6] = datosGrupo[j][6];
+                datosGrupo[j][0] = a;
+                datosGrupo[j][1] = b;
+                datosGrupo[j][2] = c;
+                datosGrupo[j][3] = d;
+                datosGrupo[j][4] = e;
+                datosGrupo[j][5] = f;
+                datosGrupo[j][6] = g;
+            }
+            if (datosGrupo[j][6] == datosGrupo[j + 1][6]) {
+                if ((datosGrupo[j][4] - datosGrupo[j][5]) < (datosGrupo[j + 1][4] - datosGrupo[j + 1][5])) {
+                    a = datosGrupo[j + 1][0];
+                    b = datosGrupo[j + 1][1];
+                    c = datosGrupo[j + 1][2];
+                    d = datosGrupo[j + 1][3];
+                    e = datosGrupo[j + 1][4];
+                    f = datosGrupo[j + 1][5];
+                    g = datosGrupo[j + 1][6];
+                    datosGrupo[j + 1][0] = datosGrupo[j][0];
+                    datosGrupo[j + 1][1] = datosGrupo[j][1];
+                    datosGrupo[j + 1][2] = datosGrupo[j][2];
+                    datosGrupo[j + 1][3] = datosGrupo[j][3];
+                    datosGrupo[j + 1][4] = datosGrupo[j][4];
+                    datosGrupo[j + 1][5] = datosGrupo[j][5];
+                    datosGrupo[j + 1][6] = datosGrupo[j][6];
+                    datosGrupo[j][0] = a;
+                    datosGrupo[j][1] = b;
+                    datosGrupo[j][2] = c;
+                    datosGrupo[j][3] = d;
+                    datosGrupo[j][4] = e;
+                    datosGrupo[j][5] = f;
+                    datosGrupo[j][6] = g;
+                }
+            }
+        }
+    }
+//-----------------------------------------------------
+    $('#tbodyGrupo' + codigoGrupo).empty();
+    for (var i = 0; i < datosGrupo.length; i++) {
+        $('#tbodyGrupo' + codigoGrupo).append(
+            "<tr>" +
+            "<td>" + (parseInt(i) + 1) + "</td>" +
+            "<td>" + datosGrupo[i][0] + "</td>" +
+            "<td>" + datosGrupo[i][6] + "</td>" +
+            "<td>" + datosGrupo[i][1] + "</td>" +
+            "<td>" + datosGrupo[i][2] + "</td>" +
+            "<td>" + datosGrupo[i][3] + "</td>" +
+            "<td>" + datosGrupo[i][4] + "</td>" +
+            "<td>" + datosGrupo[i][5] + "</td>" +
+            "</tr>"
+        );
+    }
 }

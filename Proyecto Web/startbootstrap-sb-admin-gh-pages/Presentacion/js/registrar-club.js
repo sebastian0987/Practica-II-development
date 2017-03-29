@@ -96,20 +96,20 @@ $(document).ready(function () {
             document.getElementById("advertencia6").style.color = "#FF0000";
             return;
         }
-        // if (!validarRut(document.getElementById("tbRut").value)) {
-        //     document.getElementById("pError").innerHTML = "El RUT del Club ingresado no es valido.";
-        //     $('#modalMensaje').modal('show');
-        //     return;
-        // }
+        if (!validarRut(document.getElementById("tbRut").value)) {
+            document.getElementById("pError").innerHTML = "El RUT del Club ingresado no es valido.";
+            $('#modalMensaje').modal('show');
+            return;
+        }
 
-        // for(i=0;i<listaRut.length;i++){
-        //     if(!validarRut(listaRut[i])){
-        //         document.getElementById("encabezadoModalMensaje").style.backgroundColor = "#FFBABA";
-        //         document.getElementById("pError").innerHTML = "El RUT de uno de los dirigentes ingresados no es valido.";
-        //         $('#modalMensaje').modal('show');
-        //         return;
-        //     }
-        // }
+        for(i=0;i<listaRut.length;i++){
+            if(!validarRut(listaRut[i])){
+                document.getElementById("encabezadoModalMensaje").style.backgroundColor = "#FFBABA";
+                document.getElementById("pError").innerHTML = "El RUT de uno de los dirigentes ingresados no es valido.";
+                $('#modalMensaje').modal('show');
+                return;
+            }
+        }
         $("#modalConfirmacion").modal('show');
 
     });

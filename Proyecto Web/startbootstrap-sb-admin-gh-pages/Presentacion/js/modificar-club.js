@@ -88,18 +88,18 @@ $(document).ready(function () {
         // }
 //-------------------------------------------------------------------------
 
-        // if (!validarRut(document.getElementById("tbRut").value)) {
-        //     document.getElementById("pError").innerHTML = "El RUT del Club Deportivo ingresado no es valido.";
-        //     $('#modalMensaje').modal('show');
-        //     return;
-        // }
-        // for (i = 0; i < listaRut.length; i++) {
-        //     if (!validarRut(listaRut[i])) {
-        //         document.getElementById("pError").innerHTML = "El RUT de uno de los dirigentes ingresados no es valido.";
-        //         $('#modalMensaje').modal('show');
-        //         return;
-        //     }
-        // }
+        if (!validarRut(document.getElementById("tbRut").value)) {
+            document.getElementById("pError").innerHTML = "El RUT del Club Deportivo ingresado no es valido.";
+            $('#modalMensaje').modal('show');
+            return;
+        }
+        for (i = 0; i < listaRut.length; i++) {
+            if (!validarRut(listaRut[i])) {
+                document.getElementById("pError").innerHTML = "El RUT de uno de los dirigentes ingresados no es valido.";
+                $('#modalMensaje').modal('show');
+                return;
+            }
+        }
 
         $("#modalConfirmacion").modal('show');
     });
@@ -150,7 +150,7 @@ function obtenerClubDeportivo(rut) {
             document.getElementById("tbRut").value = opts[0][1];
             document.getElementById("tbFechaFundacion").value = opts[0][2];
             document.getElementById("tbPersonalidadJuridica").value = opts[0][3];
-            document.getElementById("escudoClubDeportivo").src = "image/"+opts[0][4];
+            document.getElementById("escudoClubDeportivo").src = "image/escudos/"+opts[0][4];
             obtenerCategoriasSegunClubDeportivo(opts[0][1]);
             obtenerDirigentesSegunClubDeportivo(opts[0][1]);
         }
