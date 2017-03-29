@@ -117,7 +117,7 @@ function getGruposPorCategoria(posicionCategoria) {
                         '</div>');
                 }
                 a++;
-                $('#menuGrupo' + d.codigoGrupo).append('<button id="btCargando' + d.codigoGrupo + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
+                $('#menuGrupo' + d.codigoGrupo).append('<button id="btCargando' + d.codigoGrupo + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando</button>');
             });
         // $('#tabs' + categoria).append('<button id="btCargando' + categoria + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
         getTablaPosicionesGrupo(posicionCategoria,opts,0)

@@ -22,26 +22,20 @@ y se define que en caso de que la informacion dentro del panel supere el tamaño
 }
 
 /*El texto de la tabla de muestra las distintas fechas no debe moveres, es decir, que cada hora este en una sola linea*/
-#tablaFechas{
+/*#tablaFechas{*/
     /*overflow: hidden;*/
     /*white-space: nowrap;*/
-}
+/*}*/
 
 /*En caso de que la pantalla del dispositivo sea menor que 400 se  realizan los cambios respectivos,
 en este caso en particular se reduce el tamaño delas letras de la tabla*/
 @media (max-width: 400px)
 {
-    #tablaFechas
-    {
-        font-size: xx-small;
-
+    img{
+        display: none;
     }
 }
 
-/*Se centra el texto del pie de pagina*/
-.well>p{
-    text-align: center;
-}
 .panel-green {
     border-color: #5aa57a;
 }

@@ -253,7 +253,7 @@ function obtenerListaCategorias() {
                         '</div>');
                 }
                 j++;
-                $('#menu' + d.codigoCategoria).append('<button id="btCargando' + d.codigoCategoria + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando Tabla de Posiciones</button>');
+                $('#menu' + d.codigoCategoria).append('<button id="btCargando' + d.codigoCategoria + '" class="btn btn-primary btn-lg" disabled><i class="fa fa-spinner fa-spin"></i> Cargando</button>');
             });
             // alert("s")
 

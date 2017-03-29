@@ -47,6 +47,14 @@ include "menuGlobal.php";
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="page-header">
+    </div>
+    <div class="well" style="text-align: center">
+        <p>Union Comunal Deportiva Vecinal Liga Sector Norte * R.U.T.: 72.470.300-3 * Numero Contacto: 97105118 *
+            Correo: liganorteantofagasta@gmail.com * Fecha Fundacion: 07/01/1977 * Personalidad Jurídica Nº358</p>
+    </div>
+</div>
 <script type="text/javascript" src="js/jugador.js"></script>
 
 </body>
